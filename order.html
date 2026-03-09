@@ -1,62 +1,61 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Order Details</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 20px; 
+      background: #f9f9f9; 
+    }
+    h2 { 
+      color: #d2691e; 
+    }
+    .order-box { 
+      background: #fff; 
+      padding: 20px; 
+      border-radius: 10px; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    }
+    .order-box p { 
+      margin: 8px 0; 
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Your Order Details&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h2 { color: #d2691e; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.order-box { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.order-box p { margin: 8px 0; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Rizz Quesillo – Your Order Details&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="order-box" id="order-details"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>Loading your order...</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Get URL parameters</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const params = new URLSearchParams(window.location.search);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const order = {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>date: params.get('date') || '-',</p>
-<p class="p1"><span class="Apple-converted-space">      </span>name: params.get('name') || '-',</p>
-<p class="p1"><span class="Apple-converted-space">      </span>phone: params.get('phone') || '-',</p>
-<p class="p1"><span class="Apple-converted-space">      </span>address: params.get('address') || '-',</p>
-<p class="p1"><span class="Apple-converted-space">      </span>quantity: params.get('quantity') || '-',</p>
-<p class="p1"><span class="Apple-converted-space">      </span>remarks: params.get('remarks') || '-'</p>
-<p class="p1"><span class="Apple-converted-space">    </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Display order details</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const container = document.getElementById('order-details');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>container.innerHTML = `</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; ${order.date}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; ${order.name}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Phone:&lt;/strong&gt; ${order.phone}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Address:&lt;/strong&gt; ${order.address}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Quantity:&lt;/strong&gt; ${order.quantity}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Remarks:&lt;/strong&gt; ${order.remarks}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+  <h2>Rizz Quesillo – Your Order Details</h2>
+  <div class="order-box" id="order-details">
+    Loading your order...
+  </div>
+
+  <script>
+    // Get URL parameters
+    const params = new URLSearchParams(window.location.search);
+
+    // Extract order values, provide fallback "-"
+    const order = {
+      date: params.get('date') || '-',
+      name: params.get('name') || '-',
+      phone: params.get('phone') || '-',
+      address: params.get('address') || '-',
+      quantity: params.get('quantity') || '-',
+      remarks: params.get('remarks') || '-'
+    };
+
+    // Display order details in HTML
+    const container = document.getElementById('order-details');
+    container.innerHTML = `
+      <p><strong>Date:</strong> ${order.date}</p>
+      <p><strong>Name:</strong> ${order.name}</p>
+      <p><strong>Phone:</strong> ${order.phone}</p>
+      <p><strong>Address:</strong> ${order.address}</p>
+      <p><strong>Quantity:</strong> ${order.quantity}</p>
+      <p><strong>Remarks:</strong> ${order.remarks}</p>
+    `;
+  </script>
+
 </body>
 </html>
